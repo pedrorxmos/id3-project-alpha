@@ -1,0 +1,26 @@
+{
+  "name": "id3-project-alpha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrorxmos/id3-project-alpha.git"
+  },
+  "keywords": [
+    "project",
+    "alpha"
+  ],
+  "author": "Pedro Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrorxmos/id3-project-alpha/issues"
+  },
+  "homepage": "https://github.com/pedrorxmos/id3-project-alpha#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
