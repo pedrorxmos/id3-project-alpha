@@ -14,9 +14,14 @@
 	</head>
 	<body>
 		<nav>
-			<svg data-src="assets/icons/menu.svg" class="nav-icon">
+			<!-- <svg data-src="assets/icons/menu.svg" class="nav-icon">
 				<title>Menu button</title>
 				<description>Button to open navigation menu</description>
+			</svg> -->
+
+			<svg xmlns="http://www.w3.org/2000/svg" class="nav-icon" viewBox="0 0 512 512">
+				<title>Menu</title>
+				<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" />
 			</svg>
 			<div class="nav-items d-flex">
 				<a href="#home" class="nav-item">Home</a>
@@ -34,7 +39,7 @@
 		<main>
 			<section id="home">
 				<h2>Web Developer</h2>
-				<div class="d-flex container">
+				<div class="d-flex container gap-1-5rem">
 					<div class="description">
 						<p>Hey! I am Pedro Ramos and I am a multimedia engineer specializing in front-end development.</p>
 						<p>I’m from Jumilla, but I studied multimedia engineering at ‘Universitat de València’ in Valencia. I consider myself a creative person, but sometimes i find myself being too analytical as I often start thinking as a computer.</p>
@@ -71,6 +76,7 @@
 			</section>
 		</main>
 
+		<script src="js/navbar.js"></script>
 		<!-- External SVG Loader - UNPKG -->
 		<script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js" async></script>
 	</body>

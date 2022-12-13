@@ -2,6 +2,8 @@
 $black: #1a1a1a;
 $white: #fcfcfc;
 $accent: #a242ee;
+$shadow30: #0000004d;
+
 
 /* GENERAL SELECTORS */
 
@@ -21,12 +23,17 @@ body {
 nav {
 	position: fixed;
 	display: flex;
-	flex-direction: row;
-	justify-content: end;
+	flex-direction: column;
+	align-items: center;
 	color: $white;
+	background-color: $black;
 	margin: 0;
-	padding: 1.5rem;
+	padding: 1rem 1.5rem;
+	gap: 2rem;
+	z-index: 10;
+	border-bottom: 1px solid $shadow30;
 	width: calc(100% - 3rem);
+	transition: top 0.3s, background-color 0.3s, padding 0.3s;
 }
 
 header {
@@ -114,6 +121,10 @@ a {
 	display: flex;
 }
 
+.gap-1-5rem {
+	gap: 1.5rem;
+}
+
 /* CUSTOM SELECTORS */
 
 .align-bottom-center {
@@ -123,9 +134,17 @@ a {
 }
 
 .nav-icon {
+	display: block;
+	align-self: flex-end;
 	height: 2rem;
-	fill: $white;
+	stroke: $accent;
 	color: $white;
+	
+
+	path {
+		stroke: $white;
+		transition: stroke 0.3s;
+	}
 }
 
 .nav-items {
@@ -134,19 +153,28 @@ a {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	margin: 0;
 	gap: 2rem;
-	width: 540px;
+	width: 100vw;
 	height: 100vh;
+	color: $white;
 }
 
 .nav-item {
+	color: $white;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: $white;
 }
 
 .container {
 	flex-direction: column;
+}
+
+.description {
+	font-size: 1rem;
+	p:last-child {
+		margin: 0;
+	}
 }
 
 .photo {
@@ -158,7 +186,6 @@ a {
 		object-fit: cover;
 		width: 270px;
 		height: 290px;
-		z-index: 100;
 		transform: translate(-20px, -20px);
 	}
 
@@ -181,8 +208,13 @@ a {
 		height: 2.5rem;
 		fill: $accent;
 
-		title {
-			fill: black;
+		&:hover {
+			fill:#1a1a1a;
 		}
 	}
+}
+
+.color-fill--black {
+	color: $black;
+	fill: $black;
 }
