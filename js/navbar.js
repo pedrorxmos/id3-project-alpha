@@ -37,7 +37,7 @@ icon.addEventListener('click', () => {
 
 //Modify nav colors when scrolling
 const navColorScroll = () => {
-  if (pageYOffset >= header.clientHeight - 2*rem){
+  if (pageYOffset >= header.clientHeight - 3.5*rem){
     iconPath.style.stroke = black;
     nav.style.backgroundColor = white;
     items.style.color = black;
