@@ -1,9 +1,8 @@
 ﻿/* VARIABLES */
 $black: #1a1a1a;
 $white: #fcfcfc;
-$accent: #a242ee;
-$shadow30: #1a1a1a4d;
-
+$accent: #ba68f4;
+$shadow30: #00000080;
 
 /* GENERAL SELECTORS */
 
@@ -31,9 +30,9 @@ nav {
 	padding: 1rem 1.5rem;
 	gap: 2rem;
 	z-index: 10;
-	border-bottom: 1px solid $shadow30;
-	width: calc(100% - 3rem);
-	transition: top 0.3s, background-color 0.3s, padding 0.3s;
+	box-shadow: 0 2px 10px 2px $shadow30;
+	width: calc(100% - 3rem + 1px);
+	transition: top 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 header {
@@ -139,7 +138,6 @@ a {
 	height: 2rem;
 	stroke: $accent;
 	color: $white;
-	
 
 	path {
 		stroke: $white;
@@ -164,6 +162,7 @@ a {
 	color: $white;
 	text-transform: uppercase;
 	text-decoration: none;
+	transition: color 0.3s;
 }
 
 .container {
@@ -195,8 +194,7 @@ a {
 		border: 1px solid $accent;
 		padding: 4px;
 		transform: translate(10px, 10px);
-	}	
-
+	}
 }
 
 .socialmedia {
@@ -207,10 +205,6 @@ a {
 	.socialmedia__icon {
 		height: 2.5rem;
 		fill: $accent;
-
-		&:hover {
-			fill:#1a1a1a;
-		}
 	}
 }
 
