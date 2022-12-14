@@ -185,7 +185,12 @@ a {
 		object-fit: cover;
 		width: 270px;
 		height: 290px;
-		transform: translate(-20px, -20px);
+		transform: translate(0px, 0px);
+		-webkit-transform: translate(0px, 0px);
+		filter: grayscale(1);
+		-webkit-filter: grayscale(1);
+		transition: all 1s;
+		-webkit-transition: all 1s;
 	}
 
 	.photo__border {
@@ -193,7 +198,10 @@ a {
 		height: 290px;
 		border: 1px solid $accent;
 		padding: 4px;
-		transform: translate(10px, 10px);
+		transform: translate(0px, 0px);
+		-webkit-transform: translate(0px, 0px);
+		transition: all 1s;
+		-webkit-transition: all 1s;
 	}
 }
 
