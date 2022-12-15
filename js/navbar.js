@@ -4,6 +4,7 @@ const icon = document.querySelector('.nav-icon');
 const iconPath = document.querySelector('path');
 const items = document.querySelector('.nav-items');
 const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
 let navbarOpened = false;
 let prevScrollpos = window.pageYOffset;
 
