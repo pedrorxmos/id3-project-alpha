@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 	color: $black;
 	background-color: $white;
 }
@@ -106,7 +106,7 @@ h4,
 	font-weight: 200;
 }
 
-h6, .h6 {
+h5, .h5 {
 	font-size: 1rem;
 	font-weight: 600;
 }
@@ -125,8 +125,20 @@ a {
 	display: flex;
 }
 
+.row {
+	flex-direction: row;
+}
+
+.column {
+	flex-direction: column;
+}
+
 .gap-1-5rem {
 	gap: 1.5rem;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
 }
 
 /* CUSTOM SELECTORS */
@@ -171,7 +183,6 @@ a {
 }
 
 .container {
-	flex-direction: column;
 	gap: 24px;
 }
 
@@ -183,7 +194,7 @@ a {
 }
 
 .photo {
-	margin: 50px auto;
+	margin: 10px auto;
 	position: relative;
 	height: 320px;
 
@@ -195,8 +206,8 @@ a {
 		-webkit-transform: translate(0px, 0px);
 		filter: grayscale(1);
 		-webkit-filter: grayscale(1);
-		transition: all 1s;
-		-webkit-transition: all 1s;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
 	}
 
 	.photo__border {
@@ -206,8 +217,8 @@ a {
 		padding: 4px;
 		transform: translate(0px, 0px);
 		-webkit-transform: translate(0px, 0px);
-		transition: all 1s;
-		-webkit-transition: all 1s;
+		transition: all 0.5s;
+		-webkit-transition: all 0.5s;
 	}
 }
 
@@ -235,3 +246,20 @@ a {
 		margin: 0;
 	}
 }
+
+.hobbie {
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
+	gap: 10px;
+	text-align: center;
+
+	svg {
+		max-height: 100px;
+		max-width: 150px;
+		path {
+			fill: $black;
+		}
+	}
+}
+

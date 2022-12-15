@@ -5,7 +5,7 @@ const photoImg =  document.querySelector('#js-photo-img');
 
 window.addEventListener('scroll', () => {
   //console.log(pageYOffset, photo.clientHeight, photo.offsetHeight, (photo.clientHeight * 2)  + +(24 * rem));
-	if((pageYOffset <= photo.clientHeight - 4 * rem) || (pageYOffset >= (photo.clientHeight * 2)  + +(26 * rem))){
+	if((pageYOffset < photo.clientHeight - 4 * rem) || (pageYOffset > (photo.clientHeight * 2)  + (24 * rem))){
     photoBorder.style.transform = 'translate(0px, 0px)';
     photoBorder.style.borderColor = '#1a1a1a';
     photoImg.style.transform = 'translate(0px, 0px)';

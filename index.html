@@ -7,7 +7,7 @@
 		<!-- Google fonts & icons -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
 		<!-- My style -->
 		<link rel="stylesheet" href="css/style.css" />
 		<title>Pedro Ramos</title>
@@ -39,13 +39,13 @@
 		<main>
 			<section id="home">
 				<h2>Web Developer</h2>
-				<div class="d-flex container gap-1-5rem">
+				<div class="d-flex container column gap-1-5rem">
 					<div class="description">
 						<p>Hey! I am Pedro Ramos and I am a multimedia engineer specializing in front-end development.</p>
 						<p>I’m from Jumilla, but I studied multimedia engineering at ‘Universitat de València’ in Valencia. I consider myself a creative person, but sometimes i find myself being too analytical as I often start thinking as a computer.</p>
 						<p>I started loving websites as soon as I reveived my first computer when I was 12 or 13. Not long after my journey in web development started as I started making small webs for my own.</p>
 					</div>
-					<div class="container d-flex">
+					<div class="d-flex container column">
 						<div class="photo" id="js-photo">
 							<div class="photo__border" id="js-photo-border">
 								<img src="assets/img/picture.webp" alt="profile photo" class="photo__img" id="js-photo-img"/>
@@ -73,22 +73,43 @@
 			</section>
 			<section id="skills">
 				<h3>My Skills</h3>
-				<div class="d-flex container">
+				<div class="d-flex container column">
 					<div class="d-flex skillset">
-						<h6>Programing Languages</h6>
+						<h5>Programing Languages</h5>
 						<p>HTML, CSS/Sass, JavaScript, TypeScript, SQL, PHP, Python, Java, ISML</p>
 					</div>
 					<div class="d-flex skillset">
-						<h6>Frameworks and Libraries</h6>
+						<h5>Frameworks and Libraries</h5>
 						<p>Angular, React, Bootstrap, Node.js, jQuery, PWA</p>
 					</div>
 					<div class="d-flex skillset">
-						<h6>Tools and Platforms</h6>
+						<h5>Tools and Platforms</h5>
 						<p>Webpack, Git, GitHub, VSCode, MySQL, Salesforce (Bussiness & Marketing Cloud), Heroku</p>
 					</div>
 					<div class="d-flex skillset">
-						<h6>Soft Skills</h6>
+						<h5>Soft Skills</h5>
 						<p>Teamwork, creativity, commitment, productivity, learning capacity, flexibility</p>
+					</div>
+				</div>
+			</section>
+			<section id="hobbies">
+				<h3>My Hobbies</h3>
+				<div class="d-flex container row flex-wrap">
+					<div class="d-flex hobbie">
+						<svg data-src="assets/img/eye.svg" class="socialmedia__icon">
+						<p>Makeup</p>
+					</div>
+					<div class="d-flex hobbie">
+						<svg data-src="assets/img/music.svg" class="socialmedia__icon">
+						<p>Playing music</p>
+					</div>
+					<div class="d-flex hobbie">
+						<svg data-src="assets/img/beer.svg" class="socialmedia__icon">
+						<p>Meeting up with friends</p>
+					</div>
+					<div class="d-flex hobbie">
+						<svg data-src="assets/img/laptop.svg" class="socialmedia__icon">
+						<p>Programming</p>
 					</div>
 				</div>
 			</section>
