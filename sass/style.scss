@@ -250,14 +250,15 @@ a {
 
 .hobbie {
 	flex-direction: column;
-	flex: 1;
+	flex: calc(50% - 1rem);
 	align-items: center;
 	gap: 10px;
 	text-align: center;
 
 	svg {
 		max-height: 100px;
-		max-width: 150px;
+		max-width: 100%;
+		
 		path {
 			fill: $black;
 		}
