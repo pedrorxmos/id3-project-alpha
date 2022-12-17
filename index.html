@@ -116,25 +116,40 @@
 			<section id="contact">
 				<h3>Contact</h3>
 				<div class="d-flex column container">
-					<div class="d-flex column">
+					<div class="d-flex column gap-1-5rem align-items--center">
 						<p>You can contact me on:</p>
-						<button class="btn">LinkedIn</button>
+						<button class="btn">
+							<svg data-src="assets/icons/linkedin.svg" class="btn__icon">
+								<title>LinkedIn profile link</title>
+							</svg>
+							LinkedIn
+						</button>
 					</div>
-					<div class="d-flex column">
+					<div class="d-flex column gap-1-5rem align-items--center">
 						<p>Or chat with me on email:</p>
-						<form action="none">
-							<div class="form__item">
+						<form class="d-flex column form">
+							<div class="d-flex row form__item">
+								<svg data-src="assets/icons/person.svg" class="form__icon">
+									<title>LinkedIn profile link</title>
+								</svg>
 								<input class="form__input" type="text" id="name" name="name" required/>
 								<label class="form__label" for="name">Name</label>
 							</div>
-							<div class="form__item">
+							<div class="d-flex row form__item">
+								<svg data-src="assets/icons/at.svg" class="form__icon">
+									<title>email form input icon</title>
+								</svg>
 								<input class="form__input" type="email" id="email" name="email" required/>
-								<label class="form__label" for="name">Email</label>
+								<label class="form__label" for="email">Email</label>
 							</div>
-							<div class="form__item">
+							<div class="d-flex row form__item">
+								<svg data-src="assets/icons/email.svg" class="form__icon">
+									<title>LinkedIn profile link</title>
+								</svg>
 								<textarea class="form__input" id="message" name="message" required></textarea>
 								<label class="form__label" for="message">Your message</label>
 							</div>
+							<button type="submit" class="btn form__button">Send Message</button>
 						</form>
 					</div>
 				</div>

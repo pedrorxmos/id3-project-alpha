@@ -2,6 +2,7 @@
 $black: #1a1a1a;
 $white: #fcfcfc;
 $accent: #ba68f4;
+$error: #f24242;
 $shadow30: #00000080;
 
 /* GENERAL SELECTORS */
@@ -148,6 +149,10 @@ a {
 	flex-wrap: wrap;
 }
 
+.align-items--center {
+	align-items: center;
+}
+
 /* CUSTOM SELECTORS */
 
 .align-bottom-center {
@@ -191,6 +196,7 @@ a {
 
 .container {
 	gap: 24px;
+	width: 100%;
 }
 
 .description {
@@ -262,6 +268,93 @@ a {
 		path {
 			fill: $black;
 		}
+	}
+}
+
+.btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	background-color: $accent;
+	color: white;
+	border: 1px solid $accent;
+	border-radius: 0.5rem;
+	padding: 0.75rem 1rem;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	width: fit-content;
+
+	.btn__icon {
+		height: 1.25rem;
+		fill: $white;
+	}
+}
+
+.form {
+	gap: 1rem;
+	width: 100%;
+
+	.form__item {
+		position: relative;
+		padding: 10px;
+		gap: 10px;
+		border: 1px solid $accent;
+		border-radius: 0.5rem;
+
+		.form__icon {
+			height: 1.5rem;
+			fill: $accent;
+
+			rect {
+				stroke: $accent;
+			}
+			path {
+				stroke: $accent;
+			}
+		}
+
+		.form__input {
+			width: 100%;
+			background: $white;
+			outline: none;
+			border: none;
+			font-size: 1rem;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 300;
+
+			&:focus ~ .form__label, &:valid ~ .form__label {
+				transform: translate(-10px, -1.25rem);
+				font-size: 0.75rem;
+				background-color: $white;
+				padding:0 10px;
+				font-weight: 600;
+			}
+
+			&:focus ~ .form__label, &:valid ~ .form__label {
+				color: $accent;
+			}
+
+			&:required ~ .form__label::after {
+				content: ' *';
+			}
+		}
+
+		textarea.form__input {
+			min-height: 4rem;
+		}
+
+		.form__label {
+			position: absolute;
+			left: calc(18px + 1.5rem);
+			top: 12px;
+			transition: all 0.3s;
+		}
+	}
+
+	.form__button {
+		margin: 0 auto;
 	}
 }
 
