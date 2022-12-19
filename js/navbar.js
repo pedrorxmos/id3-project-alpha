@@ -8,11 +8,6 @@ const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 let navbarOpened = false;
 let prevScrollpos = window.pageYOffset;
 
-//Color variables
-const black = '#1a1a1a';
-const white = '#fcfcfc';
-let shadow = '#0000001a';
-
 window.addEventListener('scroll', () => {
 	if (!navbarOpened) {
 		navColorScroll();
@@ -22,15 +17,12 @@ window.addEventListener('scroll', () => {
 });
 
 icon.addEventListener('click', () => {
-	if (items.style.display === 'none') {
+	if (navbarOpened === false) {
 		navbarOpened = true;
-		items.style.display = 'flex';
-		iconPath.style.stroke = white;
-		nav.style.backgroundColor = black;
-		items.style.color = white;
+		nav.classList.add('navbar-open');
 	} else {
 		navbarOpened = false;
-		items.style.display = 'none';
+		nav.classList.remove('navbar-open');
 		navColorScroll();
 	}
 });
@@ -38,15 +30,9 @@ icon.addEventListener('click', () => {
 //Modify nav colors when scrolling
 const navColorScroll = () => {
 	if (pageYOffset >= header.clientHeight - 3.2 * rem) {
-		iconPath.style.stroke = black;
-		nav.style.backgroundColor = white;
-		items.style.color = black;
-		shadow = '#0000001a';
+		nav.classList.add('navbar-light');
 	} else {
-		iconPath.style.stroke = white;
-		nav.style.backgroundColor = black;
-		items.style.color = white;
-		shadow = '#00000080';
+		nav.classList.remove('navbar-light')
 	}
 };
 
@@ -54,22 +40,18 @@ const navColorScroll = () => {
 const navHideOnScroll = () => {
 	let currentScrollPos = window.pageYOffset;
 	if (prevScrollpos > currentScrollPos) {
-		nav.style.top = '-1px';
-		nav.style.boxShadow = '0 2px 10px 2px' + shadow;
+		nav.classList.remove('navbar-hide');
 	} else {
-		nav.style.top = 'calc(-4rem - 1px)';
-		nav.style.boxShadow = '0 0 10px 0 transparent';
+		nav.classList.add('navbar-hide');
 	}
 	prevScrollpos = currentScrollPos;
 };
 
 const navScrollOnTop = () => {
 	if (pageYOffset <= 10) {
-		nav.style.paddingTop = '1.5rem';
-		nav.style.top = '-1px';
-		nav.style.boxShadow = '0 0 10px 0 transparent';
+		nav.classList.add('navbar-top');
 	} else {
-		nav.style.paddingTop = '1rem';
+		nav.classList.remove('navbar-top');
 	}
 };
 
