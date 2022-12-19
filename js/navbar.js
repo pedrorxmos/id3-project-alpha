@@ -1,4 +1,5 @@
 ﻿const header = document.querySelector('header');
+const body = document.querySelector('body');
 const nav = document.querySelector('nav');
 const icon = document.querySelector('.nav-icon');
 const items = document.querySelectorAll('.nav-item');
@@ -22,9 +23,11 @@ icon.addEventListener('click', () => {
 	if (navbarOpened === false) {
 		navbarOpened = true;
 		nav.classList.add('navbar-open');
+		body.style.overflow = 'hidden';
 	} else {
 		navbarOpened = false;
 		nav.classList.remove('navbar-open');
+		body.style.overflow = 'auto';
 		navColorScroll();
 	}
 });
