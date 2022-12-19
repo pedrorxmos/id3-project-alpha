@@ -10,6 +10,7 @@ $shadow10: #0000001a;
 
 html {
 	font-size: 16px;
+	scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 400px) {
@@ -199,12 +200,17 @@ a {
 		height: 100vh;
 
 		.nav-item {
+			color: $white;
 			text-transform: uppercase;
 			text-decoration: none;
+			font-weight: 300;
 			transition: color 0.3s;
-			color: $white;
+
+			&-active {
+				font-weight: 600;
+				color: $accent;
+			}
 		}
-	
 	}
 	
 	
@@ -222,6 +228,10 @@ a {
 		.nav-items {
 			.nav-item {
 				color: $black;
+
+				&-active {
+					color: $accent;
+				}
 			}
 		}
 	}
@@ -251,12 +261,14 @@ a {
 			
 			.nav-item {
 				color: $white;
+
+				&-active {
+					color: $accent;
+				}
 			}
 		}
 	}
 }
-
-
 
 .container {
 	gap: 24px;

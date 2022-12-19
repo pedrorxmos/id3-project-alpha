@@ -1,8 +1,8 @@
 ﻿const header = document.querySelector('header');
 const nav = document.querySelector('nav');
 const icon = document.querySelector('.nav-icon');
-const iconPath = document.querySelector('path');
-const items = document.querySelector('.nav-items');
+const items = document.querySelectorAll('.nav-item');
+const sections = document.querySelectorAll('section');
 const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
 let navbarOpened = false;
@@ -14,6 +14,8 @@ window.addEventListener('scroll', () => {
 		navHideOnScroll();
 		navScrollOnTop();
 	}
+
+	actualSection();
 });
 
 icon.addEventListener('click', () => {
@@ -47,6 +49,7 @@ const navHideOnScroll = () => {
 	prevScrollpos = currentScrollPos;
 };
 
+//Modify nav padding and shadow when its on top of the page
 const navScrollOnTop = () => {
 	if (pageYOffset <= 10) {
 		nav.classList.add('navbar-top');
@@ -56,3 +59,19 @@ const navScrollOnTop = () => {
 };
 
 navScrollOnTop();
+
+//Gets the section shown and change nav-item to active
+const actualSection = () => {
+	sections.forEach(section => {
+		if(pageYOffset >= section.offsetTop - section.clientHeight / 3)
+			items.forEach(item => {
+				if(item.getAttribute('href') === '#' + section.getAttribute('id'))
+					item.classList.add('nav-item-active');
+				else
+					item.classList.remove('nav-item-active');
+			})
+	})
+	
+}
+
+actualSection();
