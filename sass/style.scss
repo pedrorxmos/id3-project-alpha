@@ -11,6 +11,18 @@ html {
 	font-size: 16px;
 }
 
+@media screen and (max-width: 400px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	html {
+		font-size: 14px;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -252,6 +264,17 @@ a {
 	}
 }
 
+@media screen and (max-width: 370px) {
+	.photo {
+		height: 288px;
+		
+		.photo__img, .photo__border {
+			width: 240px;
+			height: 258px
+		}
+	}
+}
+
 .socialmedia {
 	flex-direction: row;
 	gap: 30px;
@@ -362,6 +385,7 @@ a {
 
 		textarea.form__input {
 			min-height: 4rem;
+			resize: vertical;	
 		}
 
 		.form__label {
