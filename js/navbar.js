@@ -15,12 +15,11 @@ window.addEventListener('scroll', () => {
 		navHideOnScroll();
 		navScrollOnTop();
 	}
-
 	actualSection();
 });
 
 icon.addEventListener('click', () => {
-	if (navbarOpened === false) {
+	if (!navbarOpened) {
 		navbarOpened = true;
 		nav.classList.add('navbar-open');
 		body.style.overflow = 'hidden';
@@ -31,6 +30,17 @@ icon.addEventListener('click', () => {
 		navColorScroll();
 	}
 });
+
+items.forEach(item => {
+	item.addEventListener('click', () => {
+		if(navbarOpened) {
+			navbarOpened = false;
+			nav.classList.remove('navbar-open');
+			body.style.overflow = 'auto';
+			navColorScroll();
+		}
+	})
+})
 
 //Modify nav colors when scrolling
 const navColorScroll = () => {
