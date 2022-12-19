@@ -146,7 +146,7 @@
 								<svg data-src="assets/icons/email.svg" class="form__icon">
 									<title>message input area icon</title>
 								</svg>
-								<textarea class="form__input" id="message" name="message" required></textarea>
+								<textarea class="form__input" id="message" name="message" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'required></textarea>
 								<label class="form__label" for="message">Your message</label>
 							</div>
 							<button type="submit" class="btn form__button">Send Message</button>
