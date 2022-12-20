@@ -381,7 +381,7 @@ a {
 	align-items: center;
 	gap: 10px;
 	background-color: $accent;
-	color: white;
+	color: $white;
 	border: 1px solid $accent;
 	border-radius: 0.5rem;
 	padding: 0.75rem 1rem;
@@ -389,10 +389,22 @@ a {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	width: fit-content;
+	transition: color 0.3s, background-color 0.3s, border 0.3s;
 
 	.btn__icon {
 		height: 1.25rem;
 		fill: $white;
+		transition: fill 0.3s;
+	}
+
+	&:hover {
+		color: $accent;
+		background-color: $white;
+
+		.btn__icon {
+			fill: $accent;
+		}
+
 	}
 }
 
