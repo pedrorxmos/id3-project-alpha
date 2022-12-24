@@ -350,20 +350,6 @@ a, button {
 		height: 290px;
 		transition: all 0.5s;
 		-webkit-transition: all 0.5s;
-
-		&-out {
-			transform: translate(0px, 0px);
-			-webkit-transform: translate(0px, 0px);
-			filter: grayscale(1);
-			-webkit-filter: grayscale(1);
-		}
-
-		&-in {
-			transform: translate(-20px, -20px);
-			-webkit-transform: translate(-20px, -20px);
-			filter: grayscale(0);
-			-webkit-filter: grayscale(0);
-		}
 	}
 
 	.photo__border {
@@ -372,17 +358,35 @@ a, button {
 		padding: 4px;
 		transition: all 0.5s;
 		-webkit-transition: all 0.5s;
+	}
 
-		&-out {
-			transform: translate(0px, 0px);
-			-webkit-transform: translate(0px, 0px);
-			border: 1px solid $black;
+	&-in {
+		.photo__img {
+			transform: translate(-20px, -20px);
+			-webkit-transform: translate(-20px, -20px);
+			filter: grayscale(0);
+			-webkit-filter: grayscale(0);
 		}
 
-		&-in {
+		.photo__border {
 			transform: translate(10px, 10px);
 			-webkit-transform: translate(10px, 10px);
 			border: 1px solid $accent;
+		}
+	}
+
+	&-out {
+		.photo__img {
+			transform: translate(0px, 0px);
+			-webkit-transform: translate(0px, 0px);
+			filter: grayscale(1);
+			-webkit-filter: grayscale(1);
+		}
+
+		.photo__border {
+			transform: translate(0px, 0px);
+			-webkit-transform: translate(0px, 0px);
+			border: 1px solid $black;
 		}
 	}
 }
@@ -556,7 +560,7 @@ a, button {
 
 	.navbar {
 		align-items: flex-end;
-		padding: 1.5rem 3rem;
+		padding: 1.5rem 4.5rem;
 		width: 100vw;
 		box-sizing: border-box;
 		
@@ -573,7 +577,7 @@ a, button {
 			margin: 0;
 			gap: 2.5rem;
 			height: unset;
-			width: 100%;
+			max-width: 100%;
 			box-sizing: border-box;
 	
 			.nav-item {
@@ -582,7 +586,7 @@ a, button {
 		}
 
 		&-top {
-			padding-top: 2rem;
+			padding-top: 2.5rem;
 		}
 	}
 

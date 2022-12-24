@@ -3,19 +3,21 @@ const photoBorder = document.querySelector('#js-photo-border');
 const photoImg =  document.querySelector('#js-photo-img');
 //rem is declared in navbar.js
 
-window.addEventListener('scroll', () => {
-  // console.log(pageYOffset, photo.clientHeight, photo.offsetHeight, photo.clientHeight + (4 * rem));
+console.log(photo.clientHeight)
 
-	if((pageYOffset < photo.clientHeight + (4 * rem)) || (pageYOffset > (photo.clientHeight * 2)  + (24 * rem))){
-    photoBorder.classList.remove('photo__border-in');
-    photoBorder.classList.add('photo__border-out');
-    photoImg.classList.remove('photo__img-in');
-    photoImg.classList.add('photo__img-out');
+window.addEventListener('scroll', () => {
+
+  console.log('top', photo.getBoundingClientRect().top);
+  console.log('bottom', photo.getBoundingClientRect().bottom);
+
+	if((photo.getBoundingClientRect().top < window.innerHeight - photo.clientHeight/2) && (photo.getBoundingClientRect().bottom > photo.clientHeight/2)){
+    photo.classList.remove('photo-out');
+    photo.classList.add('photo-in');
+    
   }
   else {
-    photoBorder.classList.remove('photo__border-out');
-    photoBorder.classList.add('photo__border-in');
-    photoImg.classList.remove('photo__img-out');
-    photoImg.classList.add('photo__img-in');
+    photo.classList.remove('photo-in');
+    photo.classList.add('photo-out');
   }
+
 });
