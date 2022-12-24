@@ -277,21 +277,35 @@ a, button {
 			text-transform: uppercase;
 			text-decoration: none;
 			font-weight: 300;
-			transition: color 0.3s;
+			transition: color 0.3s, font-weight 0.3s;
+			border-bottom: 1px solid transparent;
+			border-image-slice: 1;
+			padding: 2px 0;
+			border-width: 1px;
+			animation-name: navItemBorderOut;
+			animation-fill-mode: forwards;
+			animation-duration: 0.3s;
 
 			&-active {
 				font-weight: 600;
 				color: $accent;
+			}
+
+			&:hover {
+				animation-name: navItemBorderIn;
+				animation-fill-mode: forwards;
+				animation-duration: 0.3s;
+				
 			}
 		}
 	}
 	
 	
 	&-light {
-
 		box-shadow: 0 2px 10px 2px $shadow10;
 
 		background-color: $white;
+
 		.nav-icon {
 			path {
 				stroke: $black;
@@ -301,9 +315,19 @@ a, button {
 		.nav-items {
 			.nav-item {
 				color: $black;
+				animation-name: navItemBorderOutBlack;
+				animation-fill-mode: forwards;
+				animation-duration: 0.3s;
 
-				&-active {
-					color: $accent;
+					&-active {
+						font-weight: 600;
+						color: $accent;
+					}
+
+				&:hover {
+					animation-name: navItemBorderInBlack;
+					animation-fill-mode: forwards;
+					animation-duration: 0.3s;
 				}
 			}
 		}
@@ -341,6 +365,42 @@ a, button {
 			}
 		}
 	}
+}
+
+@keyframes navItemBorderIn {
+	0%   {border-image-source: linear-gradient(90deg, transparent 50%, $white 50%, $white 50%, $white 50%, transparent 50%);}
+	20%   {border-image-source: linear-gradient(90deg, transparent 40%, $white 40%, $white 50%, $white 60%, transparent 60%);}
+	40%   {border-image-source: linear-gradient(90deg, transparent 30%, $white 30%, $white 50%, $white 70%, transparent 70%);}
+	60%   {border-image-source: linear-gradient(90deg, transparent 20%, $white 20%, $white 50%, $white 80%, transparent 80%);}
+	80% 	{border-image-source: linear-gradient(90deg, transparent 10%, $white 10%, $white 50%, $white 90%, transparent 90%);}
+	100% 	{border-image-source: linear-gradient(90deg, transparent 0%, $white 0%, $white 50%, $white 100%, transparent 100%);}
+}
+
+@keyframes navItemBorderOut {
+	0% 	{border-image-source: linear-gradient(90deg, transparent 0%, $white 0%, $white 50%, $white 100%, transparent 100%);}
+	20% 	{border-image-source: linear-gradient(90deg, transparent 10%, $white 10%, $white 50%, $white 90%, transparent 90%);}
+	40%   {border-image-source: linear-gradient(90deg, transparent 20%, $white 20%, $white 50%, $white 80%, transparent 80%);}
+	60%   {border-image-source: linear-gradient(90deg, transparent 30%, $white 30%, $white 50%, $white 70%, transparent 70%);}
+	80%   {border-image-source: linear-gradient(90deg, transparent 40%, $white 40%, $white 50%, $white 60%, transparent 60%);}
+	100%   {border-image-source: linear-gradient(90deg, transparent 50%, $white 50%, $white 50%, $white 50%, transparent 50%);}
+}
+
+@keyframes navItemBorderInBlack {
+	0%   {border-image-source: linear-gradient(90deg, transparent 50%, $black 50%, $black 50%, $black 50%, transparent 50%);}
+	20%   {border-image-source: linear-gradient(90deg, transparent 40%, $black 40%, $black 50%, $black 60%, transparent 60%);}
+	40%   {border-image-source: linear-gradient(90deg, transparent 30%, $black 30%, $black 50%, $black 70%, transparent 70%);}
+	60%   {border-image-source: linear-gradient(90deg, transparent 20%, $black 20%, $black 50%, $black 80%, transparent 80%);}
+	80% 	{border-image-source: linear-gradient(90deg, transparent 10%, $black 10%, $black 50%, $black 90%, transparent 90%);}
+	100% 	{border-image-source: linear-gradient(90deg, transparent 0%, $black 0%, $black 50%, $black 100%, transparent 100%);}
+}
+
+@keyframes navItemBorderOutBlack {
+	0% 	{border-image-source: linear-gradient(90deg, transparent 0%, $black 0%, $black 50%, $black 100%, transparent 100%);}
+	20% 	{border-image-source: linear-gradient(90deg, transparent 10%, $black 10%, $black 50%, $black 90%, transparent 90%);}
+	40%   {border-image-source: linear-gradient(90deg, transparent 20%, $black 20%, $black 50%, $black 80%, transparent 80%);}
+	60%   {border-image-source: linear-gradient(90deg, transparent 30%, $black 30%, $black 50%, $black 70%, transparent 70%);}
+	80%   {border-image-source: linear-gradient(90deg, transparent 40%, $black 40%, $black 50%, $black 60%, transparent 60%);}
+	100%   {border-image-source: linear-gradient(90deg, transparent 50%, $black 50%, $black 50%, $black 50%, transparent 50%);}
 }
 
 .container {
@@ -432,9 +492,6 @@ a, button {
 		padding: 5px;
 		border-radius: 8px;
 		transition: fill 0.3s;
-
-		path {
-		}
 
 		&:hover {
 			fill: $white;
