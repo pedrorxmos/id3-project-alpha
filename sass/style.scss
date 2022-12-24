@@ -25,6 +25,12 @@ html {
 	}
 }
 
+@media screen and (min-width: 650px) {
+	html {
+		font-size: 18px;
+	}
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -131,18 +137,6 @@ a {
 	main {
 		max-width: 600px;
 	}
-
-	h1, .h1 {
-		font-size: 7.87rem;
-	}
-
-	h2, .h2 {
-		font-size: 2.25rem;
-	}
-
-	h3, h4, .h3, .h4 {
-		font-size: 1.7rem
-	}
 }
 
 @media screen and (min-width: 900px) {
@@ -155,21 +149,21 @@ a {
 	}
 
 	h1, .h1 {
-		font-size: 8.5rem;
+		font-size: 7.8rem;
 	}
 
 	h2, .h2 {
-		font-size: 2.5rem;
+		font-size: 2.25rem;
 	}
 
 	h3, h4, .h3, .h4 {
-		font-size: 1.9rem
+		font-size: 1.67rem
 	}
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1240px) {
 	h1, .h1 {
-		font-size: 11rem;
+		font-size: 10rem;
 	}
 
 }
