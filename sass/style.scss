@@ -57,6 +57,7 @@ main {
 	margin: 0 auto;
 	padding: 2rem;
 	max-width: 450px;
+	gap: 2rem;
 	transition: width 0.3s, max-width 0.3s;
 }
 
@@ -129,13 +130,16 @@ p {
 	margin: 0;
 }
 
-a {
+a, button {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 @media screen and (min-width: 650px) {
 	main {
 		max-width: 600px;
+		padding: 2.8rem;
+		gap: 2.8rem;
 	}
 
 	header {
@@ -151,6 +155,7 @@ a {
 
 	section {
 		gap: 4rem;
+		padding: 1.8rem 0;
 	}
 
 	header {
@@ -587,11 +592,12 @@ a {
 
 	.col-row {
 		flex-direction: row;
-		align-items: center;;
 	}
 
 	.description {
 		width: calc(55% - 12px);
+		align-self: center;
+
 	}
 	.photo-div {
 		width: calc(45% - 12px);
@@ -631,5 +637,13 @@ a {
 			height: 140px;
 		
 		}
+	}
+
+	.contact-buttons {
+		width: calc(33.33% - 12px);
+	}
+
+	.contact-form {
+		width: calc(66.67% - 12px);
 	}
 }
