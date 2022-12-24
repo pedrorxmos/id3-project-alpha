@@ -25,18 +25,6 @@ html {
 	}
 }
 
-@media screen and (min-width: 650px) {
-	html {
-		font-size: 18px;
-	}
-}
-
-@media screen and (min-width: 900px) {
-	html {
-		font-size: 20px;
-	}
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -143,6 +131,18 @@ a {
 	main {
 		max-width: 600px;
 	}
+
+	h1, .h1 {
+		font-size: 7.87rem;
+	}
+
+	h2, .h2 {
+		font-size: 2.25rem;
+	}
+
+	h3, h4, .h3, .h4 {
+		font-size: 1.7rem
+	}
 }
 
 @media screen and (min-width: 900px) {
@@ -151,10 +151,28 @@ a {
 	}
 
 	section {
-		gap: 3.2rem;
+		gap: 4rem;
+	}
+
+	h1, .h1 {
+		font-size: 8.5rem;
+	}
+
+	h2, .h2 {
+		font-size: 2.5rem;
+	}
+
+	h3, h4, .h3, .h4 {
+		font-size: 1.9rem
 	}
 }
 
+@media screen and (min-width: 1200px) {
+	h1, .h1 {
+		font-size: 11rem;
+	}
+
+}
 /* UTILITIES */
 
 .d-flex {
@@ -514,6 +532,11 @@ a {
 }
 
 @media screen and (min-width: 900px) {
+
+	.align-bottom-center {
+		align-items: flex-start;
+	}
+
 	.navbar {
 		align-items: flex-end;
 		padding: 1.5rem 2rem;
