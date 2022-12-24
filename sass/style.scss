@@ -181,6 +181,7 @@ a, button {
 	}
 
 }
+
 /* UTILITIES */
 
 .d-flex {
@@ -216,6 +217,7 @@ a, button {
 }
 
 .navbar {
+	box-sizing: border-box;
 	position: fixed;
 	display: flex;
 	flex-direction: column;
@@ -228,7 +230,7 @@ a, button {
 	z-index: 10;
 	top: -1px;
 	box-shadow: 0 2px 10px 2px $shadow50;
-	width: calc(100% - 3rem + 1px);
+	width: 100%;
 	transition: top 0.3s, background-color 0.3s, box-shadow 0.3s, padding-top 0.2s;
 
 	.nav-icon {
@@ -561,7 +563,7 @@ a, button {
 	.navbar {
 		align-items: flex-end;
 		padding: 1.5rem 4.5rem;
-		width: 100vw;
+		width: 100%;
 		box-sizing: border-box;
 		
 
