@@ -555,6 +555,7 @@ a, button {
 				background-color: $white;
 				padding:0 10px;
 				font-weight: 600;
+				cursor: default;
 			}
 
 			&:focus ~ .form__label, &:valid ~ .form__label {
@@ -576,6 +577,7 @@ a, button {
 			left: calc(18px + 1.5rem);
 			top: 12px;
 			transition: all 0.3s;
+			cursor: text;
 		}
 	}
 
