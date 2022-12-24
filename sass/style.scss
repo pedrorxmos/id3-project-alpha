@@ -137,6 +137,11 @@ a {
 	main {
 		max-width: 600px;
 	}
+
+	header {
+		height: 520px;
+	}
+
 }
 
 @media screen and (min-width: 900px) {
@@ -146,6 +151,10 @@ a {
 
 	section {
 		gap: 4rem;
+	}
+
+	header {
+		height: 620px;
 	}
 
 	h1, .h1 {
@@ -542,7 +551,7 @@ a {
 
 	.navbar {
 		align-items: flex-end;
-		padding: 1.5rem 2rem;
+		padding: 1.5rem 3rem;
 		width: 100vw;
 		box-sizing: border-box;
 		
