@@ -394,7 +394,7 @@ a, button {
 		}
 	}
 
-	&-out {
+	&-out, &:hover {
 		.photo__img {
 			transform: translate(0px, 0px);
 			-webkit-transform: translate(0px, 0px);
@@ -429,6 +429,17 @@ a, button {
 	.socialmedia__icon {
 		height: 2.5rem;
 		fill: $accent;
+		padding: 5px;
+		border-radius: 8px;
+		transition: fill 0.3s;
+
+		path {
+		}
+
+		&:hover {
+			fill: $white;
+			background-color:$accent;
+		}
 	}
 }
 
@@ -457,7 +468,7 @@ a, button {
 		}
 
 		.grey {
-			fill: $shadow50;
+			fill: $accent;
 		}
 	}
 }
