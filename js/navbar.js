@@ -26,7 +26,7 @@ icon.addEventListener('click', () => {
 	} else {
 		navbarOpened = false;
 		nav.classList.remove('navbar-open');
-		body.style.overflow = 'auto';
+		body.style.overflow = 'overlay';
 		navColorScroll();
 	}
 });
@@ -36,7 +36,7 @@ items.forEach(item => {
 		if(navbarOpened) {
 			navbarOpened = false;
 			nav.classList.remove('navbar-open');
-			body.style.overflow = 'auto';
+			body.style.overflow = 'overlay';
 			navColorScroll();
 		}
 	})
