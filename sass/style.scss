@@ -531,6 +531,15 @@ a {
 	}
 }
 
+@media screen and (min-width: 650px) {
+	.hobbie {	
+		svg {
+			height: 120px;
+		
+		}
+	}
+}
+
 @media screen and (min-width: 900px) {
 
 	.align-bottom-center {
@@ -610,5 +619,14 @@ a {
 
 	.skillset {
 		width: calc(50% - 12px)
+	}
+
+	.hobbie {
+		flex: 1;
+	
+		svg {
+			height: 140px;
+		
+		}
 	}
 }
