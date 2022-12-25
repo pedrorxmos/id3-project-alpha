@@ -245,8 +245,7 @@ a, button {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 300;
-  transition: color 0.3s, font-weight 0.3s, border 0.3s;
-  border-bottom: 1px solid transparent;
+  transition: color 0.3s, font-weight 0.3s, filter 0.3s;
   border-image-slice: 1;
   padding: 2px 0;
   border-width: 1px;
@@ -256,7 +255,7 @@ a, button {
   color: #ba68f4;
 }
 .navbar .nav-items .nav-item:hover {
-  border-color: #fcfcfc;
+  filter: opacity(0.5);
 }
 .navbar-light {
   box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1019607843);
@@ -271,9 +270,6 @@ a, button {
 .navbar-light .nav-items .nav-item-active {
   font-weight: 600;
   color: #ba68f4;
-}
-.navbar-light .nav-items .nav-item:hover {
-  border-color: #1a1a1a;
 }
 .navbar-top {
   padding-top: 1.5rem;
@@ -506,7 +502,7 @@ a, button {
 @media screen and (min-width: 750px) {
   .navbar {
     align-items: flex-end;
-    padding: 1.5rem 4.5rem;
+    padding: 1.5rem 3.5rem;
     width: 100%;
     box-sizing: border-box;
   }

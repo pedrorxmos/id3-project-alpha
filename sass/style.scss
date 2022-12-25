@@ -272,8 +272,7 @@ a, button {
 			text-transform: uppercase;
 			text-decoration: none;
 			font-weight: 300;
-			transition: color 0.3s, font-weight 0.3s, border 0.3s;
-			border-bottom: 1px solid transparent;
+			transition: color 0.3s, font-weight 0.3s, filter 0.3s;
 			border-image-slice: 1;
 			padding: 2px 0;
 			border-width: 1px;
@@ -284,7 +283,7 @@ a, button {
 			}
 
 			&:hover {
-				border-color: $white;
+				filter: opacity(0.5);
 				
 			}
 		}
@@ -310,10 +309,6 @@ a, button {
 						font-weight: 600;
 						color: $accent;
 					}
-
-				&:hover {
-					border-color: $black;
-				}
 			}
 		}
 	}
@@ -593,7 +588,7 @@ a, button {
 @media screen and (min-width: 750px) {
 	.navbar {
 		align-items: flex-end;
-		padding: 1.5rem 4.5rem;
+		padding: 1.5rem 3.5rem;
 		width: 100%;
 		box-sizing: border-box;
 		
