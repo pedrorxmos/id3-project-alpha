@@ -15,11 +15,6 @@ html {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 650px) {
-  html {
-    font-size: 18px;
-  }
-}
 body {
   margin: 0;
   padding: 0;
@@ -159,7 +154,7 @@ a, button {
 }
 @media screen and (min-width: 1240px) {
   h1, .h1 {
-    font-size: 10rem;
+    font-size: 11rem;
   }
 }
 /* SCROLLBAR */
@@ -508,10 +503,7 @@ a, button {
     height: 120px;
   }
 }
-@media screen and (min-width: 900px) {
-  .align-bottom-center {
-    align-items: flex-start;
-  }
+@media screen and (min-width: 750px) {
   .navbar {
     align-items: flex-end;
     padding: 1.5rem 4.5rem;
@@ -533,10 +525,15 @@ a, button {
     box-sizing: border-box;
   }
   .navbar .nav-items .nav-item {
-    font-size: 16px;
+    font-size: 0.85rem;
   }
   .navbar-top {
     padding-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .align-bottom-center {
+    align-items: flex-start;
   }
   .container {
     row-gap: 64px;
