@@ -646,7 +646,7 @@ a, button {
 	}
 	.photo-div {
 		width: calc(45% - 12px);
-		gap: 24px
+		gap: 1rem
 	}
 
 	.photo {
@@ -664,7 +664,8 @@ a, button {
 	}
 
 	.socialmedia {
-	
+		gap: 2rem;
+		
 		.socialmedia__icon {
 			height: 2rem;
 			fill: $accent;

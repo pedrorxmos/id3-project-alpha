@@ -547,7 +547,7 @@ a, button {
   }
   .photo-div {
     width: calc(45% - 12px);
-    gap: 24px;
+    gap: 1rem;
   }
   .photo {
     height: 380px;
@@ -559,6 +559,9 @@ a, button {
   .photo .photo__border {
     width: 321px;
     height: 356px;
+  }
+  .socialmedia {
+    gap: 2rem;
   }
   .socialmedia .socialmedia__icon {
     height: 2rem;
