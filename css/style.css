@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* VARIABLES */
 /* GENERAL SELECTORS */
 html {
@@ -492,6 +493,26 @@ a, button {
 }
 .form .form__button {
   margin: 0 auto;
+}
+
+.pop-up {
+  display: none;
+  border: 1px solid #ba68f4;
+  box-sizing: border-box;
+  background-color: rgba(186, 104, 244, 0.168627451);
+  color: #ba68f4;
+  font-weight: 400;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+.pop-up::before {
+  content: "✓";
+  color: #ba68f4;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 650px) {

@@ -576,6 +576,27 @@ a, button {
 	}
 }
 
+.pop-up {
+	display: none;
+	border: 1px solid $accent;
+	box-sizing: border-box;
+	background-color: #ba68f42b;
+	color: $accent;
+	font-weight: 400;
+	width: 100%;
+	padding: 1rem;
+	font-size: 1rem;
+	border-radius: 8px;
+
+	&::before {
+		content: '✓';
+		color: $accent;
+		font-size: 1rem;
+		margin-right: 0.5rem;
+		font-weight: 600;
+	}
+}
+
 @media screen and (min-width: 650px) {
 	.hobbie {	
 		svg {
