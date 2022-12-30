@@ -108,7 +108,8 @@ h4,
   font-weight: 200;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1rem;
   font-weight: 600;
 }
@@ -117,7 +118,8 @@ p {
   margin: 0;
 }
 
-a, button {
+a,
+button {
   text-decoration: none;
   cursor: pointer;
 }
@@ -143,18 +145,24 @@ a, button {
   header {
     height: 600px;
   }
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 7.8rem;
   }
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 3rem;
   }
-  h3, h4, .h3, .h4 {
+  h3,
+  h4,
+  .h3,
+  .h4 {
     font-size: 1.67rem;
   }
 }
 @media screen and (min-width: 1240px) {
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 11rem;
   }
 }
@@ -358,7 +366,8 @@ a, button {
   .photo {
     height: 288px;
   }
-  .photo .photo__img, .photo .photo__border {
+  .photo .photo__img,
+  .photo .photo__border {
     width: 240px;
     height: 258px;
   }
@@ -496,18 +505,23 @@ a, button {
 }
 
 .pop-up {
-  display: none;
-  border: 1px solid #ba68f4;
+  top: 20px;
+  left: 50%;
+  right: 50%;
   box-sizing: border-box;
   background-color: rgba(186, 104, 244, 0.168627451);
   color: #ba68f4;
   font-weight: 400;
-  width: 100%;
-  padding: 1rem;
   font-size: 1rem;
   border-radius: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
 }
-.pop-up::before {
+.pop-up p {
+  padding: 1rem;
+}
+.pop-up p::before {
   content: "✓";
   color: #ba68f4;
   font-size: 1rem;

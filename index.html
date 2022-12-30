@@ -30,6 +30,7 @@
 				<a href="#contact" class="nav-item">Contact</a>
 			</div>
 		</nav>
+		
 		<header>
 			<div class="align-bottom-center d-flex">
 				<h4>Hello there, I'm</h4>
@@ -127,7 +128,7 @@
 					</div>
 					<div class="d-flex column gap-1-5rem align-items--center contact-form">
 						<p>Or chat with me on email:</p>
-						<form class="d-flex column form">
+						<form class="d-flex column form" id="js-form">
 							<div class="d-flex row form__item">
 								<svg data-src="assets/icons/person.svg" class="form__icon">
 									<title>name form input icon</title>
@@ -149,9 +150,15 @@
 								<textarea class="form__input" id="message" name="message" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'required></textarea>
 								<label class="form__label" for="message">Your message</label>
 							</div>
+							<div class="notificactions">
+								<div class="pop-up" id="js-message">
+									<p>
+										Your message has been sent correctly. I'll contact you as soon as possible.
+									</p> 
+								</div>
+							</div>
 							<button type="submit" class="btn form__button">Send Message</button>
 						</form>
-						<div class="pop-up">Your message is correctly sent, I'll contact you as soon as possible.</div>
 					</div>
 				</div>
 			</section>
@@ -162,6 +169,7 @@
 
 		<script src="js/navbar.js"></script>
 		<script src="js/photo.js"></script>
+		<script src="js/form.js"></script>
 		<!-- External SVG Loader - UNPKG -->
 		<script type="text/javascript" src="https://unpkg.com/external-svg-loader@latest/svg-loader.min.js" async></script>
 	</body>
