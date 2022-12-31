@@ -242,7 +242,7 @@ button {
 	color: $white;
 	background-color: $black;
 	margin: 0;
-	padding: 1rem 1.5rem;
+	padding: 1.5rem 1.5rem;
 	gap: 2rem;
 	z-index: 10;
 	top: -1px;
@@ -253,11 +253,38 @@ button {
 	.nav-icon {
 		display: block;
 		align-self: flex-end;
-		height: 2rem;
+		height: 1rem;
 
-		path {
-			stroke: $white;
+		path, line {
 			transition: stroke 0.3s;
+			stroke-linecap:round;
+			stroke-miterlimit:10;
+			stroke-width:32px;
+		}
+	}
+
+	.nav-burger {
+		width: 2rem;
+  	height: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.burger-line {
+			height: 0.2rem;
+			border-radius: 3px;
+			background-color: $white;
+			transition: all 0.3s;
+
+			&:first-child {
+				animation: firstLineClose 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+				animation-fill-mode: forwards;
+			}
+
+			&:last-child {
+				animation: lastLineClose 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+				animation-fill-mode: forwards;
+			}
 		}
 	}
 
@@ -299,8 +326,14 @@ button {
 		background-color: $white;
 
 		.nav-icon {
-			path {
+			path, line {
 				stroke: $black;
+			}
+		}
+
+		.nav-burger{
+			.burger-line {
+				background-color: $black;
 			}
 		}
 
@@ -333,6 +366,26 @@ button {
 		.nav-icon {
 			path {
 				stroke: $white;
+			}
+		}
+
+		.nav-burger {
+			.burger-line{
+				background-color: $white;
+
+				&:first-child {
+					animation: firstLineOpen 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+  				animation-fill-mode: forwards;
+				}
+
+				&:last-child {
+					animation: lastLineOpen 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+  				animation-fill-mode: forwards;
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
 			}
 		}
 
@@ -713,6 +766,48 @@ button {
 
 	.contact-form {
 		width: calc(66.67% - 12px);
+	}
+}
+
+/* KEYFRAMES FOR ANIMATIONS */
+
+@keyframes firstLineOpen {
+	0%   {
+		transform: translateY(0) rotate(0);
+	}
+
+	100% {
+		transform: translateY(0.65rem) rotate(46deg);
+	}
+}
+
+@keyframes lastLineOpen {
+	0%   {
+		transform: translateY(0) rotate(0);
+	}
+
+	100% {
+		transform: translateY(-0.65rem) rotate(-46deg);
+	}
+}
+
+@keyframes firstLineClose {
+	100%   {
+		transform: translateY(0) rotate(0);
+	}
+
+	0% {
+		transform: translateY(0.5rem) rotate(45deg);
+	}
+}
+
+@keyframes lastLineClose {
+	100%   {
+		transform: translateY(0) rotate(0);
+	}
+
+	0% {
+		transform: translateY(-0.5rem) rotate(-45deg);
 	}
 }
 

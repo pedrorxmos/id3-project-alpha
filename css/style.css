@@ -221,7 +221,7 @@ button {
   color: #fcfcfc;
   background-color: #1a1a1a;
   margin: 0;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   gap: 2rem;
   z-index: 10;
   top: -1px;
@@ -232,11 +232,34 @@ button {
 .navbar .nav-icon {
   display: block;
   align-self: flex-end;
-  height: 2rem;
+  height: 1rem;
 }
-.navbar .nav-icon path {
-  stroke: #fcfcfc;
+.navbar .nav-icon path, .navbar .nav-icon line {
   transition: stroke 0.3s;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 32px;
+}
+.navbar .nav-burger {
+  width: 2rem;
+  height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar .nav-burger .burger-line {
+  height: 0.2rem;
+  border-radius: 3px;
+  background-color: #fcfcfc;
+  transition: all 0.3s;
+}
+.navbar .nav-burger .burger-line:first-child {
+  animation: firstLineClose 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+  animation-fill-mode: forwards;
+}
+.navbar .nav-burger .burger-line:last-child {
+  animation: lastLineClose 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+  animation-fill-mode: forwards;
 }
 .navbar .nav-items {
   display: none;
@@ -270,8 +293,11 @@ button {
   box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1019607843);
   background-color: #fcfcfc;
 }
-.navbar-light .nav-icon path {
+.navbar-light .nav-icon path, .navbar-light .nav-icon line {
   stroke: #1a1a1a;
+}
+.navbar-light .nav-burger .burger-line {
+  background-color: #1a1a1a;
 }
 .navbar-light .nav-items .nav-item {
   color: #1a1a1a;
@@ -294,6 +320,20 @@ button {
 }
 .navbar-open .nav-icon path {
   stroke: #fcfcfc;
+}
+.navbar-open .nav-burger .burger-line {
+  background-color: #fcfcfc;
+}
+.navbar-open .nav-burger .burger-line:first-child {
+  animation: firstLineOpen 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+  animation-fill-mode: forwards;
+}
+.navbar-open .nav-burger .burger-line:last-child {
+  animation: lastLineOpen 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
+  animation-fill-mode: forwards;
+}
+.navbar-open .nav-burger .burger-line:nth-child(2) {
+  opacity: 0;
 }
 .navbar-open .nav-items {
   display: flex;
@@ -612,6 +652,39 @@ button {
   }
   .contact-form {
     width: calc(66.67% - 12px);
+  }
+}
+/* KEYFRAMES FOR ANIMATIONS */
+@keyframes firstLineOpen {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0.65rem) rotate(46deg);
+  }
+}
+@keyframes lastLineOpen {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(-0.65rem) rotate(-46deg);
+  }
+}
+@keyframes firstLineClose {
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  0% {
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+}
+@keyframes lastLineClose {
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  0% {
+    transform: translateY(-0.5rem) rotate(-45deg);
   }
 }
 
