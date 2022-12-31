@@ -54,12 +54,14 @@ const navColorScroll = () => {
 //Hide when scrolling
 const navHideOnScroll = () => {
 	let currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		nav.classList.remove('navbar-hide');
-	} else {
-		nav.classList.add('navbar-hide');
+	if (pageYOffset > 10) {
+		if (prevScrollpos > currentScrollPos) {
+			nav.classList.remove('navbar-hide');
+		} else {
+			nav.classList.add('navbar-hide');
+		}
+		prevScrollpos = currentScrollPos;
 	}
-	prevScrollpos = currentScrollPos;
 };
 
 //Modify nav padding and shadow when its on top of the page
