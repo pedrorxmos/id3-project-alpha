@@ -2,7 +2,7 @@
 $black: #1a1a1a;
 $white: #fcfcfc;
 $accent: #ba68f4;
-$error: #f24242;
+$error: #f22828;
 $shadow50: #00000080;
 $shadow10: #0000001a;
 
@@ -603,7 +603,8 @@ button {
 			font-weight: 300;
 
 			&:focus ~ .form__label,
-			&:valid ~ .form__label {
+			&:valid ~ .form__label,
+			&-error ~ .form__label {
 				transform: translate(-10px, -1.25rem);
 				font-size: 0.75rem;
 				background-color: $white;
@@ -619,6 +620,10 @@ button {
 
 			&:required ~ .form__label::after {
 				content: ' *';
+			}
+
+			&-error ~ .form__label {
+				color: $error;
 			}
 		}
 

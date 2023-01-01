@@ -521,7 +521,7 @@ button {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
-.form .form__item .form__input:focus ~ .form__label, .form .form__item .form__input:valid ~ .form__label {
+.form .form__item .form__input:focus ~ .form__label, .form .form__item .form__input:valid ~ .form__label, .form .form__item .form__input-error ~ .form__label {
   transform: translate(-10px, -1.25rem);
   font-size: 0.75rem;
   background-color: #fcfcfc;
@@ -534,6 +534,9 @@ button {
 }
 .form .form__item .form__input:required ~ .form__label::after {
   content: " *";
+}
+.form .form__item .form__input-error ~ .form__label {
+  color: #f22828;
 }
 .form .form__item textarea.form__input {
   min-height: 4rem;
