@@ -221,13 +221,13 @@ button {
   color: #fcfcfc;
   background-color: #1a1a1a;
   margin: 0;
-  padding: 1.5rem 1.5rem;
+  padding: 1.5rem 1.7rem;
   gap: 0rem;
   z-index: 10;
   top: -1px;
   box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.5019607843);
   width: 100%;
-  transition: top 0.3s, background-color 0.3s, box-shadow 0.3s, padding-top 0.2s, gap 0.2s;
+  transition: top 0.3s, background-color 0.1s, box-shadow 0.3s, padding-top 0.2s, gap 0.3s;
 }
 .navbar .nav-icon {
   display: block;
@@ -241,8 +241,8 @@ button {
   stroke-width: 32px;
 }
 .navbar .nav-burger {
-  width: 2rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -263,7 +263,6 @@ button {
 }
 .navbar .nav-items {
   display: flex;
-  background-color: #1a1a1a;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -271,9 +270,10 @@ button {
   max-height: 0;
   margin: 0;
   gap: 2rem;
+  padding-top: 0;
   width: 100vw;
   height: 100vh;
-  transition: max-height 0.3s;
+  transition: max-height 0.3s, padding-top 0.3s;
 }
 .navbar .nav-items .nav-item {
   color: #fcfcfc;
@@ -310,7 +310,7 @@ button {
   color: #ba68f4;
 }
 .navbar-top {
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   top: -1px;
   box-shadow: 0 0 10px 0 transparent;
 }
@@ -342,6 +342,7 @@ button {
 .navbar-open .nav-items {
   display: flex;
   max-height: 100vh;
+  padding-top: 2rem;
 }
 .navbar-open .nav-items .nav-item {
   color: #fcfcfc;
@@ -666,7 +667,8 @@ button {
     transform: translateY(0) rotate(0);
   }
   100% {
-    transform: translateY(0.65rem) rotate(46deg);
+    transform: translateY(0.6rem) rotate(46deg);
+    width: calc(100% + 0.3rem);
   }
 }
 @keyframes lastLineOpen {
@@ -674,7 +676,8 @@ button {
     transform: translateY(0) rotate(0);
   }
   100% {
-    transform: translateY(-0.65rem) rotate(-46deg);
+    transform: translateY(-0.4rem) rotate(-46deg);
+    width: calc(100% + 0.3rem);
   }
 }
 @keyframes firstLineClose {
