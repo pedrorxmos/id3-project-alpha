@@ -12,15 +12,12 @@ form.addEventListener('submit', (event) => {
 	mssg.style.maxHeight = '100%';
 });
 
-
-inputs.forEach(input => {
+inputs.forEach((input) => {
 	input.addEventListener('focusout', () => {
-		if(input.value == null || input.value == '')
-		{
+		if (input.value == null || input.value == '') {
 			input.classList.remove('form__input-error');
-		}	
-		else if(!input.checkValidity()){
+		} else if (!input.checkValidity()) {
 			input.classList.add('form__input-error');
 		}
-	})
-})
+	});
+});

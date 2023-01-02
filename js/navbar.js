@@ -31,23 +31,23 @@ icon.addEventListener('click', () => {
 	}
 });
 
-items.forEach(item => {
+items.forEach((item) => {
 	item.addEventListener('click', () => {
-		if(navbarOpened) {
+		if (navbarOpened) {
 			navbarOpened = false;
 			nav.classList.remove('navbar-open');
 			body.style.overflow = 'overlay';
 			navColorScroll();
 		}
-	})
-})
+	});
+});
 
 //Modify nav colors when scrolling
 const navColorScroll = () => {
 	if (pageYOffset >= header.clientHeight - 3.2 * rem) {
 		nav.classList.add('navbar-light');
 	} else {
-		nav.classList.remove('navbar-light')
+		nav.classList.remove('navbar-light');
 	}
 };
 
@@ -77,16 +77,13 @@ navScrollOnTop();
 
 //Gets the section shown and change nav-item to active
 const actualSection = () => {
-	sections.forEach(section => {
-		if(pageYOffset >= section.offsetTop - section.clientHeight / 3)
-			items.forEach(item => {
-				if(item.getAttribute('href') === '#' + section.getAttribute('id'))
-					item.classList.add('nav-item-active');
-				else
-					item.classList.remove('nav-item-active');
-			})
-	})
-	
-}
+	sections.forEach((section) => {
+		if (pageYOffset >= section.offsetTop - section.clientHeight / 3)
+			items.forEach((item) => {
+				if (item.getAttribute('href') === '#' + section.getAttribute('id')) item.classList.add('nav-item-active');
+				else item.classList.remove('nav-item-active');
+			});
+	});
+};
 
 actualSection();

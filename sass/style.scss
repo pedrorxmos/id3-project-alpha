@@ -255,17 +255,18 @@ button {
 		align-self: flex-end;
 		height: 1rem;
 
-		path, line {
+		path,
+		line {
 			transition: stroke 0.3s;
-			stroke-linecap:round;
-			stroke-miterlimit:10;
-			stroke-width:32px;
+			stroke-linecap: round;
+			stroke-miterlimit: 10;
+			stroke-width: 32px;
 		}
 	}
 
 	.nav-burger {
 		width: 1.6rem;
-  	height: 1.2rem;
+		height: 1.2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -329,12 +330,13 @@ button {
 		background-color: $white;
 
 		.nav-icon {
-			path, line {
+			path,
+			line {
 				stroke: $black;
 			}
 		}
 
-		.nav-burger{
+		.nav-burger {
 			.burger-line {
 				background-color: $black;
 			}
@@ -374,17 +376,17 @@ button {
 		}
 
 		.nav-burger {
-			.burger-line{
+			.burger-line {
 				background-color: $white;
 
 				&:first-child {
 					animation: firstLineOpen 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
-  				animation-fill-mode: forwards;
+					animation-fill-mode: forwards;
 				}
 
 				&:last-child {
 					animation: lastLineOpen 240ms cubic-bezier(0.23, 0.95, 0.58, 1.37);
-  				animation-fill-mode: forwards;
+					animation-fill-mode: forwards;
 				}
 
 				&:nth-child(2) {
@@ -784,18 +786,18 @@ button {
 /* KEYFRAMES FOR ANIMATIONS */
 
 @keyframes firstLineOpen {
-	0%   {
+	0% {
 		transform: translateY(0) rotate(0);
 	}
 
 	100% {
-		transform: translateY(0.60rem) rotate(46deg);
+		transform: translateY(0.6rem) rotate(46deg);
 		width: calc(100% + 0.3rem);
 	}
 }
 
 @keyframes lastLineOpen {
-	0%   {
+	0% {
 		transform: translateY(0) rotate(0);
 	}
 
@@ -806,7 +808,7 @@ button {
 }
 
 @keyframes firstLineClose {
-	100%   {
+	100% {
 		transform: translateY(0) rotate(0);
 	}
 
@@ -816,7 +818,7 @@ button {
 }
 
 @keyframes lastLineClose {
-	100%   {
+	100% {
 		transform: translateY(0) rotate(0);
 	}
 
@@ -824,75 +826,3 @@ button {
 		transform: translateY(-0.5rem) rotate(-45deg);
 	}
 }
-
-// @keyframes navItemBorderIn {
-// 	0%   {border-image-source: linear-gradient(90deg, transparent 50%, $white 50%, $white 50%, $white 50%, transparent 50%);}
-// 	20%   {border-image-source: linear-gradient(90deg, transparent 40%, $white 40%, $white 50%, $white 60%, transparent 60%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 30%, $white 30%, $white 50%, $white 70%, transparent 70%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 20%, $white 20%, $white 50%, $white 80%, transparent 80%);}
-// 	80% 	{border-image-source: linear-gradient(90deg, transparent 10%, $white 10%, $white 50%, $white 90%, transparent 90%);}
-// 	100% 	{border-image-source: linear-gradient(90deg, transparent 0%, $white 0%, $white 50%, $white 100%, transparent 100%);}
-// }
-
-// @keyframes navItemBorderOut {
-// 	0% 	{border-image-source: linear-gradient(90deg, transparent 0%, $white 0%, $white 50%, $white 100%, transparent 100%);}
-// 	20% 	{border-image-source: linear-gradient(90deg, transparent 10%, $white 10%, $white 50%, $white 90%, transparent 90%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 20%, $white 20%, $white 50%, $white 80%, transparent 80%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 30%, $white 30%, $white 50%, $white 70%, transparent 70%);}
-// 	80%   {border-image-source: linear-gradient(90deg, transparent 40%, $white 40%, $white 50%, $white 60%, transparent 60%);}
-// 	100%   {border-image-source: linear-gradient(90deg, transparent 50%, $white 50%, $white 50%, $white 50%, transparent 50%);}
-// }
-
-// @keyframes navItemBorderInBlack {
-// 	0%   {border-image-source: linear-gradient(90deg, transparent 50%, $black 50%, $black 50%, $black 50%, transparent 50%);}
-// 	20%   {border-image-source: linear-gradient(90deg, transparent 40%, $black 40%, $black 50%, $black 60%, transparent 60%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 30%, $black 30%, $black 50%, $black 70%, transparent 70%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 20%, $black 20%, $black 50%, $black 80%, transparent 80%);}
-// 	80% 	{border-image-source: linear-gradient(90deg, transparent 10%, $black 10%, $black 50%, $black 90%, transparent 90%);}
-// 	100% 	{border-image-source: linear-gradient(90deg, transparent 0%, $black 0%, $black 50%, $black 100%, transparent 100%);}
-// }
-
-// @keyframes navItemBorderOutBlack {
-// 	0% 	{border-image-source: linear-gradient(90deg, transparent 0%, $black 0%, $black 50%, $black 100%, transparent 100%);}
-// 	20% 	{border-image-source: linear-gradient(90deg, transparent 10%, $black 10%, $black 50%, $black 90%, transparent 90%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 20%, $black 20%, $black 50%, $black 80%, transparent 80%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 30%, $black 30%, $black 50%, $black 70%, transparent 70%);}
-// 	80%   {border-image-source: linear-gradient(90deg, transparent 40%, $black 40%, $black 50%, $black 60%, transparent 60%);}
-// 	100%   {border-image-source: linear-gradient(90deg, transparent 50%, $black 50%, $black 50%, $black 50%, transparent 50%);}
-// }
-
-// @-webkit-keyframes navItemBorderIn {
-// 	0%   {border-image-source: linear-gradient(90deg, transparent 50%, $white 50%, $white 50%, $white 50%, transparent 50%);}
-// 	20%   {border-image-source: linear-gradient(90deg, transparent 40%, $white 40%, $white 50%, $white 60%, transparent 60%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 30%, $white 30%, $white 50%, $white 70%, transparent 70%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 20%, $white 20%, $white 50%, $white 80%, transparent 80%);}
-// 	80% 	{border-image-source: linear-gradient(90deg, transparent 10%, $white 10%, $white 50%, $white 90%, transparent 90%);}
-// 	100% 	{border-image-source: linear-gradient(90deg, transparent 0%, $white 0%, $white 50%, $white 100%, transparent 100%);}
-// }
-
-// @-webkit-keyframes navItemBorderOut {
-// 	0% 	{border-image-source: linear-gradient(90deg, transparent 0%, $white 0%, $white 50%, $white 100%, transparent 100%);}
-// 	20% 	{border-image-source: linear-gradient(90deg, transparent 10%, $white 10%, $white 50%, $white 90%, transparent 90%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 20%, $white 20%, $white 50%, $white 80%, transparent 80%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 30%, $white 30%, $white 50%, $white 70%, transparent 70%);}
-// 	80%   {border-image-source: linear-gradient(90deg, transparent 40%, $white 40%, $white 50%, $white 60%, transparent 60%);}
-// 	100%   {border-image-source: linear-gradient(90deg, transparent 50%, $white 50%, $white 50%, $white 50%, transparent 50%);}
-// }
-
-// @-webkit-keyframes navItemBorderInBlack {
-// 	0%   {border-image-source: linear-gradient(90deg, transparent 50%, $black 50%, $black 50%, $black 50%, transparent 50%);}
-// 	20%   {border-image-source: linear-gradient(90deg, transparent 40%, $black 40%, $black 50%, $black 60%, transparent 60%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 30%, $black 30%, $black 50%, $black 70%, transparent 70%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 20%, $black 20%, $black 50%, $black 80%, transparent 80%);}
-// 	80% 	{border-image-source: linear-gradient(90deg, transparent 10%, $black 10%, $black 50%, $black 90%, transparent 90%);}
-// 	100% 	{border-image-source: linear-gradient(90deg, transparent 0%, $black 0%, $black 50%, $black 100%, transparent 100%);}
-// }
-
-// @-webkit-keyframes navItemBorderOutBlack {
-// 	0% 	{border-image-source: linear-gradient(90deg, transparent 0%, $black 0%, $black 50%, $black 100%, transparent 100%);}
-// 	20% 	{border-image-source: linear-gradient(90deg, transparent 10%, $black 10%, $black 50%, $black 90%, transparent 90%);}
-// 	40%   {border-image-source: linear-gradient(90deg, transparent 20%, $black 20%, $black 50%, $black 80%, transparent 80%);}
-// 	60%   {border-image-source: linear-gradient(90deg, transparent 30%, $black 30%, $black 50%, $black 70%, transparent 70%);}
-// 	80%   {border-image-source: linear-gradient(90deg, transparent 40%, $black 40%, $black 50%, $black 60%, transparent 60%);}
-// 	100%   {border-image-source: linear-gradient(90deg, transparent 50%, $black 50%, $black 50%, $black 50%, transparent 50%);}
-// }
