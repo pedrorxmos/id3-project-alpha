@@ -301,7 +301,8 @@ button {
 		padding-top: 0;
 		width: 100vw;
 		height: 100vh;
-		transition: max-height 0.3s, padding-top 0.3s;
+		filter: opacity(0);
+		transition: max-height 0.3s, padding-top 0.3s, filter 0.2s;
 
 		.nav-item {
 			color: $white;
@@ -399,6 +400,7 @@ button {
 			display: flex;
 			max-height: 100vh;
 			padding-top: 2rem;
+			filter: opacity(1);
 
 			.nav-item {
 				color: $white;
