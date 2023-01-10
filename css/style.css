@@ -197,6 +197,10 @@ button {
   gap: 1.5rem;
 }
 
+.gap-1rem {
+  gap: 1rem;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -496,7 +500,6 @@ button {
 }
 
 .form {
-  gap: 1rem;
   width: 100%;
 }
 .form .form__item {
