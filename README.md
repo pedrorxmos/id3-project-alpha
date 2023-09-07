@@ -4,7 +4,7 @@
     About Me
     <img src="./favicon.svg" width="16" height="16" alt="icon"/>
   </h1> 
-  Designed & coded ♥ by Pedro Ramos
+  Designed & coded with ♥ by Pedro Ramos
   <br><br>
 
 ![HTML5](https://img.shields.io/badge/HTML5-f7f7f7?style=for-the-badge&logo=HTML5)
